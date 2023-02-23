@@ -1,0 +1,21 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "./styles/normalize.scss";
+@import "./styles/root.scss";
+@import "./styles/fonts.scss";
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--color-primary-bgc);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 159px 16px 140px 16px;
+}
+
+p {
+  color: var(--color-on-surface);
+}
