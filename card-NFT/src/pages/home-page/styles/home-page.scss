@@ -1,0 +1,193 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  animation: moveOn 1s ease backwards;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-row: 2;
+}
+
+hr {
+  color: #2b3953;
+  margin-top: 2rem;
+}
+
+.card {
+  display: grid;
+  margin: 0 auto;
+  grid-template: 252px 1fr / 1fr;
+  padding: 0 2rem 1.5rem 2rem;
+  max-width: 415px;
+  min-height: 555px;
+  background: linear-gradient(
+      180deg,
+      rgba(19, 36, 59, 0) 0%,
+      rgba(19, 36, 59, 1) 400px,
+      #13243b 100%
+    ),
+    url(../../../../images/image-bgc.png) center (0 / contain) no-repeat;
+  background-color: #13243c;
+  color: #ffffff;
+  border-radius: 1.25rem;
+  transition: 0.3s all;
+
+  &:hover {
+    box-shadow: 10px 5px 50px -12px rgba(255, 255, 255, 0.1);
+  }
+
+  &__title {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    max-width: 280px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__descr {
+    max-width: 280px;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 160%;
+    letter-spacing: -0.01em;
+    color: #9293b9;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+
+  &__cost {
+    display: flex;
+    font-size: 1.125rem;
+    width: 50%;
+    gap: 10px;
+    color: var(--color-primary);
+    align-items: center;
+  }
+
+  &__date {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-body);
+  }
+
+  &__user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  &__created-by {
+    color: var(--color-body);
+    span {
+      transition: 0.3s all;
+      color: #ffffff;
+      &:hover {
+        cursor: pointer;
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 354px 16px;
+  }
+
+  hr {
+    margin-top: 1.25rem;
+  }
+
+  .card {
+    grid-template: 240px 1fr / 1fr;
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    max-width: 343px;
+    min-height: 486px;
+    background: linear-gradient(
+        180deg,
+        rgba(19, 36, 59, 0) 0%,
+        rgba(19, 36, 59, 1) 350px,
+        #13243b 100%
+      ),
+      url(../../../../images/image-bgc.png) center (0 / auto) no-repeat;
+
+    &__descr {
+      margin-top: 1rem;
+    }
+
+    &__wrapper {
+      margin-top: 1.5rem;
+    }
+
+    &__cost {
+      font-size: 1rem;
+    }
+
+    &__date {
+      margin-right: 10px;
+      font-size: 0.875rem;
+    }
+
+    &__user {
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 163px 16px;
+  }
+
+  .card {
+    grid-template: 235px 1fr / 1fr;
+    background: linear-gradient(
+        180deg,
+        rgba(19, 36, 59, 0) 0%,
+        rgba(19, 36, 59, 1) 380px,
+        #13243b 100%
+      ),
+      url(../../../../images/image-bgc.png) center (0 / auto) no-repeat;
+
+    &__descr {
+      max-width: 250px;
+    }
+
+    &__user {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@keyframes moveOn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
