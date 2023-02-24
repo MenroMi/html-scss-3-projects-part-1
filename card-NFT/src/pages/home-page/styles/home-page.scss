@@ -18,7 +18,9 @@ body {
 }
 
 hr {
-  color: #2b3953;
+  border: none;
+  height: 1px;
+  background-color: var(--color-stroke);
   margin-top: 2rem;
 }
 
