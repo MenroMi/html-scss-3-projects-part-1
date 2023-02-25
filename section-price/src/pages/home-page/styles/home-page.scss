@@ -1,0 +1,283 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+///
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.home-page {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__header {
+    animation: open 1s ease backwards;
+    text-align: center;
+    max-width: 244px;
+  }
+
+  &__title {
+    letter-spacing: -0.03em;
+    font-size: 3rem;
+  }
+
+  &__descr {
+    margin-top: 1rem;
+    letter-spacing: -0.01em;
+    line-height: 140%;
+    color: var(--color-description);
+  }
+}
+
+.cards {
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__card {
+    animation: open 1s ease backwards;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 324px;
+    min-height: 414px;
+    border: 1px solid var(--color-stroke);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: 0.5s all;
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: var(--color-primary);
+
+      button {
+        transition: 0.3s ease;
+        background-color: var(--color-btn-hover);
+        &:hover {
+          background-color: #9180ff;
+        }
+        &:active {
+          background-color: var(--color-btn-active);
+        }
+      }
+
+      svg {
+        path {
+          stroke: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  &__features-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__type {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &__price {
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 3rem;
+    word-spacing: -10px;
+    span {
+      font-weight: normal;
+      font-size: 1rem;
+      color: var(--color-description);
+    }
+  }
+
+  &__descr {
+    max-width: 244px;
+    margin-top: 1.5rem;
+    color: var(--color-description);
+    line-height: 140%;
+    letter-spacing: -0.01em;
+  }
+
+  &__properties {
+    margin-top: 1rem;
+  }
+
+  &__property {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+#currency {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button {
+  margin: auto auto 0 auto;
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: 0.3s all;
+  &:hover {
+    background-color: #393850;
+  }
+  &:active {
+    background-color: #060613;
+  }
+}
+
+/***********/
+/***MEDIA***/
+/***********/
+
+@media (max-width: 992px) {
+  .container {
+    padding: 86px 80px;
+  }
+
+  .cards {
+    flex-direction: column;
+    width: 100%;
+
+    &__card {
+      max-width: 100%;
+      min-height: 278px;
+    }
+
+    &__info-wrapper {
+      display: grid;
+      grid-template: 40px 1fr / repeat(2, 1fr);
+      align-content: start;
+      column-gap: 5px;
+    }
+
+    &__features-wrapper {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5px;
+    }
+
+    &__descr {
+      margin-top: 0;
+    }
+
+    &__price {
+      align-self: start;
+      justify-self: end;
+      margin-top: 0;
+    }
+
+    &__properties {
+      margin-top: 1.5rem;
+    }
+
+    &__property {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .button {
+    grid-column: 2;
+    justify-self: end;
+    align-self: end;
+    margin: 0;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 72px 24px;
+  }
+
+  .cards {
+    align-items: center;
+
+    &__card {
+      max-width: 327px;
+      min-height: 414px;
+    }
+
+    &__info-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__features-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__price {
+      margin-top: 1rem;
+      line-height: 1.1;
+    }
+
+    &__descr {
+      margin-top: 1.5rem;
+    }
+
+    &__properties {
+      margin-top: 1rem;
+    }
+
+    &__property {
+      &:last-child {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .button {
+    margin: auto auto 0 auto;
+  }
+}
+
+/***********/
+/***KEYFRAMES***/
+/***********/
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,17 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--color-bgc);
+}
+
+.container {
+  max-width: 1440px;
+  padding: 120px 24px;
+  margin: 0 auto;
+}
