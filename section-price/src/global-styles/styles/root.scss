@@ -3,11 +3,15 @@
 /// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
 
 :root {
-  --color-bgc: #f9f8fb;
+  --color-bgc-main: #f9f8fb;
   --color-primary: #14132b;
   --color-description: #989bb4;
   --color-stroke: #e2e8eb;
   --color-checkbox: #ee9c50;
-  --color-btn-hover: #7863f9;
-  --color-btn-active: #6a53f4;
+  --color-btn-classic-static: #14132b;
+  --color-btn-classic-hover: #393850;
+  --color-btn-classic-active: #060613;
+  --color-btn-pro-static: #7863f9;
+  --color-btn-pro-hover: #9180ff;
+  --color-btn-pro-active: #6a53f4;
 }

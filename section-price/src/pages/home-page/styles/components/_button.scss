@@ -1,0 +1,21 @@
+a {
+  margin: auto auto 0 auto;
+  width: 100%;
+  button {
+    width: 100%;
+    height: 48px;
+    background-color: var(--color-btn-classic-static);
+    color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: 0.3s all;
+    &:hover {
+      background-color: var(--color-btn-classic-hover);
+    }
+    &:active {
+      background-color: var(--color-btn-classic-active);
+    }
+  }
+}

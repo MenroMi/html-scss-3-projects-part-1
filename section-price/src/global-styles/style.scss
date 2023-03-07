@@ -5,13 +5,36 @@
 @import "styles/root.scss";
 @import "styles/fonts.scss";
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
-  background-color: var(--color-bgc);
+  background-color: var(--color-bgc-main);
 }
 
 .container {
   max-width: 1440px;
-  padding: 120px 24px;
+  height: 810px;
+  padding: 117px 218px 120px 218px;
   margin: 0 auto;
+}
+
+.pricing {
+  & &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }

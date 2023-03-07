@@ -1,0 +1,100 @@
+.pricing-cards {
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  & &__card {
+    animation: open 1s ease backwards;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 324px;
+    min-height: 414px;
+    border: 1px solid var(--color-stroke);
+    border-radius: 1.5rem;
+    padding: 2rem 2rem 2rem 2rem;
+    transition: 0.5s all;
+    &:nth-child(2) {
+      color: #ffffff;
+      background-color: var(--color-primary);
+      svg {
+        g > path {
+          stroke: black;
+        }
+      }
+      a > button {
+        transition: 0.3s ease;
+        background-color: var(--color-btn-pro-static);
+        &:hover,
+        &:focus {
+          background-color: var(--color-btn-pro-hover);
+        }
+        &:active {
+          background-color: var(--color-btn-pro-active);
+        }
+      }
+    }
+  }
+
+  & &__card-info-wrapper {
+    h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      letter-spacing: -0.04em;
+    }
+
+    & > div {
+      font-weight: 600;
+      margin-top: 0.6rem;
+      line-height: 100%;
+      font-size: 3rem;
+      word-spacing: -12px;
+
+      div {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        font-weight: 400;
+      }
+      sub {
+        font-weight: normal;
+        font-size: 1rem;
+        color: var(--color-description);
+      }
+    }
+
+    p {
+      max-width: 244px;
+      margin-top: 1.45rem;
+      color: var(--color-description);
+      line-height: 140%;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  & &__card-features-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    ul {
+      margin-top: 1rem;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+        letter-spacing: -0.01em;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
