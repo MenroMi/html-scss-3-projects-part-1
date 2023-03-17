@@ -11,6 +11,7 @@ a {
     cursor: pointer;
     font-size: 0.875rem;
     transition: 0.3s all;
+    line-height: 100%;
     &:hover {
       background-color: var(--color-btn-classic-hover);
     }

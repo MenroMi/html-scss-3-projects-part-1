@@ -18,6 +18,8 @@
       align-content: start;
       column-gap: 5px;
 
+
+
       & > div {
         align-self: start;
         justify-self: end;
@@ -26,6 +28,8 @@
 
       p {
         margin-top: 0;
+        font-weight: 400;
+        font-size: 1rem;
       }
     }
 

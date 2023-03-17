@@ -6,17 +6,17 @@
 
   & &__card {
     animation: open 1s ease backwards;
-    background-color: #fff;
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     min-width: 324px;
     min-height: 414px;
     border: 1px solid var(--color-stroke);
     border-radius: 1.5rem;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
     transition: 0.5s all;
     &:nth-child(2) {
-      color: #ffffff;
+      color: var(--color-white);
       background-color: var(--color-primary);
       svg {
         g > path {
@@ -41,8 +41,8 @@
     h2 {
       font-weight: 600;
       font-size: 1.5rem;
-      line-height: 1.75rem;
-      letter-spacing: -0.04em;
+      line-height: 100%;
+      letter-spacing: -0.03em;
     }
 
     & > div {
@@ -50,7 +50,7 @@
       margin-top: 0.6rem;
       line-height: 100%;
       font-size: 3rem;
-      word-spacing: -12px;
+      word-spacing: -10px;
 
       div {
         display: inline-block;
