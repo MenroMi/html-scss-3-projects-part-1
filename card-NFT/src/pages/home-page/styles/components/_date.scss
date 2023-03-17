@@ -1,0 +1,11 @@
+.card {
+  &-date {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-body);
+    line-height: 160%;
+  }
+}

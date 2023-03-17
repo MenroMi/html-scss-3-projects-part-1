@@ -1,0 +1,75 @@
+@media (max-width: 992px) {
+  .container {
+    padding: 354px 0;
+  }
+
+  hr {
+    margin-top: 1.25rem;
+  }
+
+  .card {
+    grid-template: 230px 1fr / 1fr;
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    max-width: 343px;
+    min-height: 486px;
+    background: linear-gradient(
+        180deg,
+        rgba(19, 36, 59, 0) 0%,
+        rgba(19, 36, 59, 1) 350px,
+        #13243b 100%
+      ),
+      url(../../../../images/image-bgc.png) -40px (0 / auto) no-repeat;
+
+    & &__title,
+    & &__descr {
+      max-width: 251px;
+    }
+
+    & &__descr {
+      margin-top: 0.875rem;
+    }
+
+    & &__wrapper {
+      margin-top: 1.3rem;
+    }
+
+    & &__user {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+    }
+
+    &-cost {
+      font-size: 1rem;
+    }
+
+    &-date {
+      margin-right: 10px;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 163px 16px;
+  }
+
+  .card {
+    grid-template: 230px 1fr / 1fr;
+    background: linear-gradient(
+        180deg,
+        rgba(19, 36, 59, 0) 0%,
+        rgba(19, 36, 59, 1) 380px,
+        #13243b 100%
+      ),
+      url(../../../../images/image-bgc.png) center (0 / auto) no-repeat;
+
+    & &__descr {
+      max-width: 250px;
+    }
+
+    & &__user {
+      margin-top: 1rem;
+    }
+  }
+}

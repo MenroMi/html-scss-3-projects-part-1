@@ -1,0 +1,11 @@
+.card {
+  &-cost {
+    display: flex;
+    font-size: 1.125rem;
+    width: 50%;
+    gap: 10px;
+    color: var(--color-primary);
+    align-items: center;
+    line-height: 160%;
+  }
+}

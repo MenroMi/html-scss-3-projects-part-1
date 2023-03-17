@@ -1,0 +1,14 @@
+.card {
+  &-created-by {
+    color: var(--color-body);
+    line-height: 160%;
+    span {
+      transition: 0.3s all;
+      color: var(--color-white);
+      &:hover {
+        cursor: pointer;
+        color: var(--color-primary);
+      }
+    }
+  }
+}
